@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Органайзер</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+		
+		<script src="js/jquery-2.1.3.js"></script>
+		<script src="cordova.js"></script>
+    <script src="js/ratchet.js"></script>
+
+  </head>
+	
+  <body>
+	<!-- modal task page -->
+			<header class="headerPanel bar bar-nav">
+				<a class="newTask icon icon-left-nav pull-left" href="index.html" data-ignore="push"></a>
+				<a class="newTask icon icon-trash pull-right" onclick="queryDeleteTask()" href="#" data-ignore="push"></a>
+				<h1 class="layer titleName title" id="titleTask"></h1>
+			</header>
+
+			<div class="content">
+				<div class="card">
+					<p id="description" class="content-padded" style="margin-top: 0px!important;"></p>
+				</div>
+				<button class="btn-abs btn btn-positive btn-block" name="edit" onClick="window.location.href='editTask.html'">Редактировать</button>
+			</div>
+		</div>
+
+  </body>
+	<script type="application/javascript">
+		$(document).ready(function() {
+			ShowDescription();
+		});
+	</script>
+</html>
+			
